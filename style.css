@@ -4,6 +4,9 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #000;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
 }
 
 .stars {
@@ -24,13 +27,12 @@ body {
 
 /* --- Main Content Wrapper --- */
 main {
+    flex-grow: 1; /* This is the key: it makes the main content take up available space */
     padding: 2rem;
-    padding-bottom: 150px; /* Provides space for the fixed footer */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    justify-content: center; /* This centers content on short pages like the homepage */
     box-sizing: border-box;
 }
 
@@ -92,26 +94,18 @@ p {
     color: #000;
 }
 
-/* --- Fixed Footer --- */
+/* --- Footer --- */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    padding: 2rem;
+    text-align: center;
     width: 100%;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
     box-sizing: border-box;
 }
 
 .social {
     display: flex;
     gap: 1.5rem;
+    justify-content: center;
 }
 
 .social img {
@@ -124,6 +118,10 @@ footer {
 
 .social img:hover {
     opacity: 1;
+}
+
+.links {
+    margin-top: 1rem;
 }
 
 .links a {
@@ -146,10 +144,11 @@ footer {
 /* --- Article Page Specific Styles --- */
 .container.article {
     text-align: left;
-    margin: 5rem auto;
+    margin: 3rem 0;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1rem;
+    backdrop-filter: blur(5px);
 }
 
 .container.article h1 {
