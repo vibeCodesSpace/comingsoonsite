@@ -1,4 +1,4 @@
-/* --- General Body Styles --- */
+/* --- General Body & Background Styles --- */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -6,7 +6,6 @@ body {
     color: #fff;
 }
 
-/* --- Starry Background --- */
 .stars {
     position: fixed;
     top: 0;
@@ -23,38 +22,22 @@ body {
     to { background-position: -10000px 5000px; }
 }
 
-/* --- Landing Page Specific Styles --- */
-body.landing-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
-    overflow: hidden;
-}
-
-body.landing-page .container {
-    flex-grow: 1;
+/* --- Main Content Wrapper --- */
+main {
+    padding: 2rem;
+    padding-bottom: 150px; /* Provides space for the fixed footer */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-body.landing-page footer {
-    padding: 2rem 0;
-}
-
-/* --- Article Page Specific Styles --- */
-body.article-page {
-    overflow-y: auto;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .container {
     max-width: 800px;
-    padding: 2rem;
     width: 100%;
-    box-sizing: border-box;
+    text-align: center;
 }
 
 .logo {
@@ -62,7 +45,6 @@ body.article-page {
     height: 100px;
     margin-bottom: 1rem;
 }
-
 
 h1 {
     font-size: 4rem;
@@ -76,6 +58,7 @@ p {
     margin-bottom: 2rem;
 }
 
+/* --- Buttons --- */
 .buttons {
     display: flex;
     gap: 1rem;
@@ -109,14 +92,21 @@ p {
     color: #000;
 }
 
+/* --- Fixed Footer --- */
 footer {
-    position: absolute;
-    bottom: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    box-sizing: border-box;
 }
 
 .social {
@@ -147,9 +137,15 @@ footer {
     color: #fff;
 }
 
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #aaa;
+}
+
+/* --- Article Page Specific Styles --- */
 .container.article {
     text-align: left;
-    max-width: 800px;
     margin: 5rem auto;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
@@ -177,16 +173,4 @@ footer {
 
 .container.article li {
     margin-bottom: 0.5rem;
-}
-
-.article-footer {
-    position: relative;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.copyright {
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    color: #aaa;
 }
