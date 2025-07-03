@@ -28,15 +28,21 @@ body.landing-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
     text-align: center;
     overflow: hidden;
 }
 
+body.landing-page .container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 body.landing-page footer {
-    position: absolute;
-    bottom: 2rem;
+    padding: 2rem 0;
 }
 
 /* --- Article Page Specific Styles --- */
