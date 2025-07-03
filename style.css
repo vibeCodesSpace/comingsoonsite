@@ -117,6 +117,7 @@ footer {
     height: 24px;
     opacity: 0.7;
     transition: opacity 0.3s ease;
+    filter: invert(1);
 }
 
 .social img:hover {
