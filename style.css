@@ -1,17 +1,12 @@
+/* --- General Body Styles --- */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #000;
     color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-    overflow: hidden;
 }
 
+/* --- Starry Background --- */
 .stars {
     position: fixed;
     top: 0;
@@ -28,10 +23,34 @@ body {
     to { background-position: -10000px 5000px; }
 }
 
+/* --- Landing Page Specific Styles --- */
+body.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+body.landing-page footer {
+    position: absolute;
+    bottom: 2rem;
+}
+
+/* --- Article Page Specific Styles --- */
+body.article-page {
+    overflow-y: auto;
+}
+
 .container {
     max-width: 800px;
     padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
 }
+
 
 h1 {
     font-size: 4rem;
