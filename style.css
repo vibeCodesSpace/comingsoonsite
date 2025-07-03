@@ -51,6 +51,12 @@ body.article-page {
     box-sizing: border-box;
 }
 
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
 
 h1 {
     font-size: 4rem;
